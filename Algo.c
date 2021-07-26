@@ -91,7 +91,7 @@ float finalize(float raw[64]) {
    return total / 64
 }
 
-void main(int load, float input)
+void hash(int load, float input)
 {
    float raw_unhashed[64];
    for(int i = 0; i <= 64; i++) {
@@ -99,4 +99,10 @@ void main(int load, float input)
    }
    float raw[64] = calc_raw(raw_unhashed, load);
    printf(finalize(raw));
+}
+
+int main(int argc, char** argv) 
+{ 
+    hash(argv[1], argv[1]);
+    return 0;
 }

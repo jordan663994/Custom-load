@@ -22,7 +22,7 @@ WORKDIR /app/build
 ARG DETHASHCUDA=ON
 ARG DETHASHCL=ON
 
-RUN cmake .. -DETHASHCUDA=$DETHASHCUDA -DETHASHCL=$DETHASHCL
+RUN cmake ..
 RUN cmake --build .
 
 # For run nvidia container toolkit needs to be installed on host
